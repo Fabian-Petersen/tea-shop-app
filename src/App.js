@@ -4,6 +4,8 @@ import Skills from "./components/Skills";
 import About from "./pages/About";
 import Products from "./components/Products";
 import Services from "./components/Services";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Products />
       <Divider />
       <Services />
+      <Contact />
+      <Footer />
     </div>
   );
 }

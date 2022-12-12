@@ -1,10 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+import Icons from "../assets/images/icons";
 
 const Contact = () => {
   return (
-    <div>
-      <h1>Contact Page</h1>
-    </div>
+    <Wrapper>
+      <section></section>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.section``;
+
 export default Contact;
