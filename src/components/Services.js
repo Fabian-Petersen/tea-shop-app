@@ -139,6 +139,23 @@ const Wrapper = styled.section`
     font-weight: 400;
   }
 
+  .service-img-container {
+    position: relative;
+  }
+
+  .service-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    font-size: 2rem;
+    color: var(--clr-primary);
+    background: var(--clr-primary-light);
+    padding: 0.25rem 0.6rem;
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+    border: solid 0.375rem var(--clr-grey-10);
+  }
+
   @media screen and (min-width: 768px) {
     // each card take 45% with a 5% margin on the right
     .service-card {
