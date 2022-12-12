@@ -3,6 +3,7 @@ import Divider from "./components/Divider";
 import Skills from "./components/Skills";
 import About from "./pages/About";
 import Products from "./components/Products";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <About />
       <Divider />
       <Products />
+      <Divider />
+      <Services />
     </div>
   );
 }

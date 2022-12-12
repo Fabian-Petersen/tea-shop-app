@@ -43,7 +43,6 @@ const Products = () => {
             </div>
           </article>
         </div>
-        Products Section
       </section>
     </Wrapper>
   );
