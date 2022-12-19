@@ -1,7 +1,140 @@
-import React from "react";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import styled from "styled-components";
 
 const Nav = () => {
-  return <div>Nav</div>;
+  // const [showNav, setShowNav] = useState(false);
+
+  return (
+    <Wrapper>
+      <section>
+        <span className="nav-btn" id="nav-btn">
+          <FontAwesomeIcon icon={faBars} />
+        </span>
+        <nav className="navbar" id="navbar">
+          <div className="navbar-header">
+            <span className="nav-close" id="nav-close">
+              <FontAwesomeIcon icon={faTimes} />
+            </span>
+          </div>
+          <ul className="nav-items">
+            <li>
+              <a href="#!" className="nav-link">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#!" className="nav-link">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#!" className="nav-link">
+                Skills
+              </a>
+            </li>
+            <li>
+              <a href="#!" className="nav-link">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </Wrapper>
+  );
 };
+
+const Wrapper = styled.section`
+  .nav-btn {
+    position: absolute;
+    padding: 2rem;
+    z-index: 2;
+    color: var(--clr-primary);
+    font-size: 2.5rem;
+    animation: bounce 2s ease infinite;
+  }
+
+  .nav-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--clr-primary);
+    z-index: 2;
+    box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+    /* hide Navbar */
+    transform: translateX(-100%);
+    transition: var(--transition);
+  }
+
+  .showNav {
+    transform: translate(0);
+  }
+
+  .navbar-header {
+    text-align: right;
+    padding-right: 1rem;
+  }
+
+  .nav-close {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #f29c9c;
+    transition: var(--transition);
+  }
+
+  .nav-close:hover {
+    color: #bb2525;
+  }
+
+  .nav-items {
+    list-style-type: none;
+  }
+
+  .nav-link {
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    color: var(--clr-white);
+    transition: var(--transition);
+    margin-bottom: 1.5rem;
+  }
+  .nav-link:hover {
+    background-color: var(--clr-primary-light);
+    color: var(--clr-grey-2);
+    padding-left: 1.5rem;
+    border-left: 0.35rem solid red;
+  }
+
+  @media screen and (min-width: 768px) {
+    .navbar {
+      width: 30%;
+      max-width: 20rem;
+    }
+  }
+
+  /* Button Animation */
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+`;
 
 export default Nav;

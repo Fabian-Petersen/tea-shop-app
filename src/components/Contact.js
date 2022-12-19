@@ -2,9 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Icons from "../assets/images/icons";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
   const { faLocationArrow, faEnvelope, faPhone } = Icons;
+  const [state, handleSubmit] = useForm("xyyagwjo");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+
   return (
     <Wrapper>
       <section className="contact">
@@ -43,7 +49,7 @@ const Contact = () => {
 
           <article className="contact-form">
             <h3>Contact Us</h3>
-            <form action="">
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <input
                   type="text"
@@ -57,14 +63,28 @@ const Contact = () => {
                   placeholder="john@mail.com"
                   className="form-control"
                 />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
                 <textarea
                   name="message"
                   placeholder="message"
                   className="form-control"
                   rows="5"
                 ></textarea>
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
               </div>
-              <button className="btn submit-btn" type="submit">
+              <button
+                className="btn submit-btn"
+                type="submit"
+                disabled={state.submitting}
+              >
                 Submit
               </button>
             </form>
@@ -134,8 +154,12 @@ const Wrapper = styled.section`
     margin-bottom: 1.25rem;
     background-color: var(--clr-grey-10);
     border-radius: var(--border-rad);
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: var(--spacing);
+  }
+
+  .form-control:focus {
+    outline-color: var(--clr-primary);
   }
 
   .form-control::placeholder {

@@ -6,6 +6,7 @@ import {
   faHome,
   faLocationArrow,
   faEnvelope,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 // Brand Icons installed using
@@ -28,6 +29,7 @@ const Icons = {
   faFacebook,
   faTwitter,
   faInstagram,
+  faBars,
 };
 
 export default Icons;

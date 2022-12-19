@@ -16,8 +16,8 @@ function App() {
       <About />
       <Divider />
       <Products />
-      <Divider />
       <Services />
+      <Divider />
       <Contact />
       <Footer />
     </div>

@@ -44,6 +44,7 @@ const Wrapper = styled.header`
   .banner h2 {
     font-family: var(--ff-secondary);
     color: var(--clr-primary);
+    animation: slideFromRight 5s ease-in-out 1;
   }
 
   .banner h1 {
@@ -51,6 +52,7 @@ const Wrapper = styled.header`
     color: var(--clr-white);
     margin-top: 1.25rem;
     margin-bottom: 2rem;
+    animation: slideFromLeft 5s ease-in-out 1;
   }
 
   .banner-btn {
@@ -58,6 +60,71 @@ const Wrapper = styled.header`
     outline-offset: 0.25rem;
     font-size: 1.2rem;
     padding: 1rem 1.7rem;
+    animation: show 4s ease-in-out 1;
+  }
+
+  /* 
+=========================
+Animation
+======================== 
+ */
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(-200px);
+      opacity: 0.5;
+    }
+
+    75% {
+      transform: translateX(50px);
+      opacity: 0.75;
+    }
+
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-1000px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(200px);
+      opacity: 0.5;
+    }
+
+    75% {
+      transform: translateX(-50px);
+      opacity: 0.75;
+    }
+
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes show {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    50% {
+      transform: scale(1.25);
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 `;
 
