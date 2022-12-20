@@ -4,19 +4,24 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 const Nav = () => {
-  // const [showNav, setShowNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const handleNavBar = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Wrapper>
       <section>
-        <span className="nav-btn" id="nav-btn">
+        <button className="nav-btn" onClick={handleNavBar}>
           <FontAwesomeIcon icon={faBars} />
-        </span>
-        <nav className="navbar" id="navbar">
+        </button>
+        {/* </span> */}
+        {/* <nav className="navbar" id="navbar"> */}
+        <nav className={`${isOpen ? "navbar showNav" : "navbar"}`} id="navbar">
           <div className="navbar-header">
-            <span className="nav-close" id="nav-close">
+            <button className="nav-close" onClick={handleNavBar}>
               <FontAwesomeIcon icon={faTimes} />
-            </span>
+            </button>
           </div>
           <ul className="nav-items">
             <li>
@@ -48,12 +53,14 @@ const Nav = () => {
 
 const Wrapper = styled.section`
   .nav-btn {
-    position: absolute;
-    padding: 2rem;
+    position: fixed;
+    padding: 2.5rem;
+    font-size: 2.5rem;
     z-index: 2;
     color: var(--clr-primary);
-    font-size: 2.5rem;
-    animation: bounce 2s ease infinite;
+    background-color: transparent;
+    border: none;
+    animation: bounce 2s linear infinite;
   }
 
   .nav-btn:hover {
@@ -86,9 +93,12 @@ const Wrapper = styled.section`
 
   .nav-close {
     font-size: 2.5rem;
+    padding: 2.5rem;
     cursor: pointer;
     color: #f29c9c;
     transition: var(--transition);
+    background-color: transparent;
+    border: none;
   }
 
   .nav-close:hover {
@@ -102,7 +112,7 @@ const Wrapper = styled.section`
   .nav-link {
     display: block;
     font-size: 1.5rem;
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 2rem;
     text-transform: uppercase;
     letter-spacing: var(--spacing);
     color: var(--clr-white);
@@ -112,7 +122,7 @@ const Wrapper = styled.section`
   .nav-link:hover {
     background-color: var(--clr-primary-light);
     color: var(--clr-grey-2);
-    padding-left: 1.5rem;
+    padding-left: 2.5rem;
     border-left: 0.35rem solid red;
   }
 
@@ -129,7 +139,7 @@ const Wrapper = styled.section`
       transform: scale(1);
     }
     50% {
-      transform: scale(1.2);
+      transform: scale(1.15);
     }
     100% {
       transform: scale(1);

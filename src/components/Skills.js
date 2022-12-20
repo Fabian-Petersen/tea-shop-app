@@ -1,12 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMugHot } from "@fortawesome/free-solid-svg-icons";
-import { faGlassCheers } from "@fortawesome/free-solid-svg-icons";
-import { faBomb } from "@fortawesome/free-solid-svg-icons";
-import { faMortarPestle } from "@fortawesome/free-solid-svg-icons";
+import Icons from "../assets/images/icons";
 
 const Skills = () => {
+  const { faMugHot, faMortarPestle, faGlassCheers, faBomb } = Icons;
   return (
     <Wrapper>
       <section className="skills clearfix">
@@ -17,8 +15,7 @@ const Skills = () => {
           <h4 className="skill-title">Made in US</h4>
           <p className="skill-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-            natus ducimus debitis corrupti accusantium error eius nihil eum
-            praesentium sed.
+            natus ducimus
           </p>
         </article>
         <article className="skill">

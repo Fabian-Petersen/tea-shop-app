@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Image1 from "../assets/images/product-1.jpeg";
-import Image2 from "../assets/images/product-2.jpeg";
-import Image3 from "../assets/images/product-3.jpeg";
+import items from "../assets/images/productsData";
+import Product from "./Product";
 
-const Products = () => {
+const ProductList = () => {
+  const [productItems, setProductItem] = useState(items);
   return (
     <Wrapper>
       <section className="products">
@@ -24,24 +24,7 @@ const Products = () => {
             </a>
           </article>
           {/* End Prducts Info */}
-
-          <article className="products-inventory clearfix">
-            <div className="product">
-              <img src={Image1} alt="product 1" className="product-img" />
-              <h4 className="product-title">Ginger Peach Tea</h4>
-              <h4 className="product-price">R65,99</h4>
-            </div>
-            <div className="product">
-              <img src={Image2} alt="product 2" className="product-img" />
-              <h4 className="product-title">White Tea</h4>
-              <h4 className="product-price">R45,99</h4>
-            </div>
-            <div className="product">
-              <img src={Image3} alt="product 3" className="product-img" />
-              <h4 className="product-title">Fruit Sangaria</h4>
-              <h4 className="product-price">38,99</h4>
-            </div>
-          </article>
+          <Product items={productItems} />
         </div>
       </section>
     </Wrapper>
@@ -108,4 +91,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Products;
+export default ProductList;
