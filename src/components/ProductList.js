@@ -38,6 +38,7 @@ const Wrapper = styled.section`
 
   .products article {
     padding: 2rem 0;
+    position: relative;
   }
 
   .product-text {

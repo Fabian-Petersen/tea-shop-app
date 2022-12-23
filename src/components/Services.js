@@ -111,6 +111,7 @@ const Wrapper = styled.section`
   .service-card:hover {
     transform: scale(1.02);
     box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
 
   .service-img {
