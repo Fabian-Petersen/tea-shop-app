@@ -4,18 +4,18 @@ import styled from "styled-components";
 const Product = ({ items }) => {
   return (
     <Wrapper>
-      <article className="products-inventory clearfix">
+      <article className='products-inventory clearfix' id='products'>
         {items.map((productItem) => {
           const { id, image, price, name, desc } = productItem;
           return (
-            <div key={id} className="product">
-              <div className="container">
-                <img src={image} alt={name} className="product-img" />
-                <div className="img-background"></div>
+            <div key={id} className='product'>
+              <div className='container'>
+                <img src={image} alt={name} className='product-img' />
+                <div className='img-background'></div>
               </div>
-              <h4 className="product-title">{name}</h4>
+              <h4 className='product-title'>{name}</h4>
               <p>{desc}</p>
-              <h4 className="product-price">R {price}</h4>
+              <h4 className='product-price'>R {price}</h4>
             </div>
           );
         })}
@@ -27,13 +27,11 @@ const Product = ({ items }) => {
 const Wrapper = styled.section`
   .product-img {
     border-radius: 10px;
-    margin-bottom: 0;
   }
 
   .container {
     position: relative;
     overflow: hidden;
-    margin-bottom: 0;
   }
 
   .img-background {
@@ -42,8 +40,8 @@ const Wrapper = styled.section`
     bottom: -100%;
     position: absolute;
     background-color: #1f3d4750;
-    border-radius: 10px;
     transition: 0.3s ease-in-out;
+    border-radius: 10px;
   }
 
   .container:hover .img-background {

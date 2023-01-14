@@ -5,26 +5,26 @@ import Image from "../assets/images/about-bcg.jpeg";
 const About = () => {
   return (
     <Wrapper>
-      <section className="section-center clearfix">
-        <article className="about-img">
-          <div className="about-picture-container">
-            <img src={Image} alt="kettle" className="about-picture" />
+      <section className='section-center clearfix' id='about'>
+        <article className='about-img'>
+          <div className='about-picture-container'>
+            <img src={Image} alt='kettle' className='about-picture' />
           </div>
         </article>
-        <article className="about-info">
-          <div className="section-title">
+        <article className='about-info'>
+          <div className='section-title'>
             <h3>About Our</h3>
             <h2>Tea Station</h2>
           </div>
-          <p className="about-text">
+          <p className='about-text'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
             ullam corrupti earum molestiae
           </p>
-          <p className="about-text">
+          <p className='about-text'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
             ullam corrupti
           </p>
-          <a href="about.html" className="btn">
+          <a href='about.html' className='btn'>
             Learn More
           </a>
         </article>

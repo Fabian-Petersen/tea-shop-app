@@ -1,6 +1,6 @@
-import image1 from "./product-1.jpeg";
-import image2 from "./product-2.jpeg";
-import image3 from "./product-3.jpeg";
+import image1 from "../src/assets/images/product-1.jpeg";
+import image2 from "../src/assets/images/product-2.jpeg";
+import image3 from "../src/assets/images/product-3.jpeg";
 
 const items = [
   {
@@ -8,7 +8,7 @@ const items = [
     name: "Ginger Peach Tea",
     price: 6599,
     image: image1,
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. ipsum dolor, sit elit.",
   },
   {
     id: 2,

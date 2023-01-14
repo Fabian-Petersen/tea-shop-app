@@ -1,56 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Icons from "../assets/images/icons";
+import skills from "../skillsData";
 
 const Skills = () => {
-  const { faMugHot, faMortarPestle, faGlassCheers, faBomb } = Icons;
   return (
     <Wrapper>
-      <section className="skills clearfix">
-        <article className="skill">
-          <span className="skill-icon">
-            <FontAwesomeIcon icon={faMugHot} />
-          </span>
-          <h4 className="skill-title">Made in US</h4>
-          <p className="skill-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-            natus ducimus
-          </p>
-        </article>
-        <article className="skill">
-          <span className="skill-icon">
-            <FontAwesomeIcon icon={faGlassCheers} />
-          </span>
-          <h4 className="skill-title">Relaxation</h4>
-          <p className="skill-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-            natus ducimus debitis corrupti accusantium error eius nihil eum
-            praesentium sed.
-          </p>
-        </article>
-        <article className="skill">
-          <span className="skill-icon">
-            <FontAwesomeIcon icon={faBomb} />
-          </span>
-          <h4 className="skill-title">Energy</h4>
-          <p className="skill-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-            natus ducimus debitis corrupti accusantium error eius nihil eum
-            praesentium sed.
-          </p>
-        </article>
-        <article className="skill">
-          <span className="skill-icon">
-            <FontAwesomeIcon icon={faMortarPestle} />
-          </span>
-          <h4 className="skill-title">Family Recipe</h4>
-          <p className="skill-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-            natus ducimus debitis corrupti accusantium error eius nihil eum
-            praesentium sed.
-          </p>
-        </article>
+      <section className='skills clearfix' id='skills'>
+        {skills.map((item) => {
+          const { id, skill, icon, description } = item;
+          return (
+            <article className='skill' key={id}>
+              <span className='skill-icon'>
+                <FontAwesomeIcon icon={icon} />
+              </span>
+              <h4 className='skill-title'>{skill}</h4>
+              <p className='skill-text'>{description}</p>
+            </article>
+          );
+        })}
       </section>
     </Wrapper>
   );

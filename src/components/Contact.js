@@ -13,78 +13,76 @@ const Contact = () => {
 
   return (
     <Wrapper>
-      <section className="contact">
-        <div className="section-center clearfix">
-          <article className="contact-info">
-            <div className="contact-item">
-              <h4 className="contact-title">
-                <span className="contact-icon">
+      <section className='contact' id='contact'>
+        <div className='section-center clearfix'>
+          <article className='contact-info'>
+            <div className='contact-item'>
+              <h4 className='contact-title'>
+                <span className='contact-icon'>
                   <FontAwesomeIcon icon={faLocationArrow} />
                 </span>
                 Address
               </h4>
-              <h4 className="contact-text">Tygervalley, Cape Town, 7530</h4>
+              <h4 className='contact-text'>Tygervalley, Cape Town, 7530</h4>
             </div>
-            <div className="contact-item">
-              <h4 className="contact-title">
-                <span className="contact-icon">
+            <div className='contact-item'>
+              <h4 className='contact-title'>
+                <span className='contact-icon'>
                   <FontAwesomeIcon icon={faEnvelope} />
                 </span>
                 Email
               </h4>
-              <h4 className="contact-text">john@email.com</h4>
+              <h4 className='contact-text'>john@email.com</h4>
             </div>
-            <div className="contact-item">
-              <h4 className="contact-title">
-                <span className="contact-icon">
+            <div className='contact-item'>
+              <h4 className='contact-title'>
+                <span className='contact-icon'>
                   <FontAwesomeIcon icon={faPhone} />
                 </span>
                 Phone
               </h4>
-              <h4 className="contact-text">021 555 7852</h4>
+              <h4 className='contact-text'>021 555 7852</h4>
             </div>
           </article>
 
           {/* ================================================= Contact Form  ============================================= */}
 
-          <article className="contact-form">
+          <article className='contact-form'>
             <h3>Contact Us</h3>
             <form onSubmit={handleSubmit}>
-              <div className="form-group">
+              <div className='form-group'>
                 <input
-                  type="text"
-                  name="name"
-                  placeholder="name"
-                  className="form-control"
+                  type='text'
+                  name='name'
+                  placeholder='name'
+                  className='form-control'
                 />
                 <input
-                  type="email"
-                  name="email"
-                  placeholder="john@mail.com"
-                  className="form-control"
+                  type='email'
+                  name='email'
+                  placeholder='john@mail.com'
+                  className='form-control'
                 />
                 <ValidationError
-                  prefix="Email"
-                  field="email"
+                  prefix='Email'
+                  field='email'
                   errors={state.errors}
                 />
                 <textarea
-                  name="message"
-                  placeholder="message"
-                  className="form-control"
-                  rows="5"
-                ></textarea>
+                  name='message'
+                  placeholder='message'
+                  className='form-control'
+                  rows='5'></textarea>
                 <ValidationError
-                  prefix="Message"
-                  field="message"
+                  prefix='Message'
+                  field='message'
                   errors={state.errors}
                 />
               </div>
               <button
-                className="btn submit-btn"
-                type="submit"
-                disabled={state.submitting}
-              >
+                className='btn submit-btn'
+                type='submit'
+                disabled={state.submitting}>
                 Submit
               </button>
             </form>
