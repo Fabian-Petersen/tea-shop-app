@@ -1,92 +1,41 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Icons from "../assets/images/icons";
-import images from "../assets/images/images";
+import services from "../servicesData";
 
 const Services = () => {
-  const { faHome, faMugHot, faMortarPestle } = Icons;
-  const { Image1, Image2, Image3 } = images;
   return (
     <Wrapper>
-      <section className="services">
-        <div className="section-title services-title">
+      <section className='services'>
+        <div className='section-title services-title'>
           <h3>Explore</h3>
           <h2>Our Services</h2>
         </div>
-        <div className="section-center clearfix">
-          {/* Single Card */}
-          <article className="service-card">
-            <div className="service-img-container">
-              <img
-                src={Image1}
-                alt="single service 1"
-                className="service-img"
-              />
-              <span className="service-icon">
-                <FontAwesomeIcon className="fa-fw" icon={faMortarPestle} />
-              </span>
-            </div>
-            <div className="service-info">
-              <h4>Custom Recipes</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita ex, nesciunt ipsam vel eaque ab.
-              </p>
-              <a href="products.html" className="btn service-btn">
-                Read More
-              </a>
-            </div>
-          </article>
-          {/* End of Single Card */}
-          {/* Single Card */}
-          <article className="service-card">
-            <div className="service-img-container">
-              <img
-                src={Image2}
-                alt="single service 1"
-                className="service-img"
-              />
-              <span className="service-icon">
-                <FontAwesomeIcon className="fa-fw" icon={faHome} />
-              </span>
-            </div>
-            <div className="service-info">
-              <h4>Home Deliveries</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita ex, nesciunt ipsam vel eaque ab.
-              </p>
-              <a href="products.html" className="btn service-btn">
-                Read More
-              </a>
-            </div>
-          </article>
-          {/* End of Single Card */}
-          {/* Single Card */}
-          <article className="service-card">
-            <div className="service-img-container">
-              <img
-                src={Image3}
-                alt="single service 1"
-                className="service-img"
-              />
-              <span className="service-icon">
-                <FontAwesomeIcon className="fa-fw" icon={faMugHot} />
-              </span>
-            </div>
-            <div className="service-info">
-              <h4>Tea Aging</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita ex, nesciunt ipsam vel eaque ab.
-              </p>
-              <a href="products.html" className="btn service-btn">
-                Read More
-              </a>
-            </div>
-          </article>
-          {/* End of Single Card */}
+        <div className='section-center clearfix' id='services'>
+          {services.map((item) => {
+            const { id, service, image, description, icon } = item;
+            return (
+              <article className='service-card' key={id}>
+                <div className='service-img-container'>
+                  <img
+                    src={image}
+                    alt='single service 1'
+                    className='service-img'
+                  />
+                  <span className='service-icon'>
+                    <FontAwesomeIcon className='fa-fw' icon={icon} />
+                  </span>
+                </div>
+                <div className='service-info'>
+                  <h4>{service}</h4>
+                  <p>{description}</p>
+                  <a href='products.html' className='btn service-btn'>
+                    Read More
+                  </a>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
     </Wrapper>

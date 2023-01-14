@@ -7,22 +7,22 @@ const Footer = () => {
   const { faFacebook, faTwitter, faInstagram } = Icons;
   return (
     <Wrapper>
-      <footer className="footer">
-        <div className="section-center">
-          <div className="social-icon">
-            <a href="http://">
+      <footer className='footer'>
+        <div className='section-center'>
+          <div className='social-icon'>
+            <a href='http://'>
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="http://">
+            <a href='http://'>
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="http://">
+            <a href='http://'>
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
-          <h4 className="footer-text">
-            &copy; <span id="date"></span>
-            <span className="company">Tea Station</span>
+          <h4 className='footer-text'>
+            &copy; <span id='date'>{new Date().getFullYear()}</span>
+            <span className='company'> Tea Station</span>
             All Rights reserved
           </h4>
         </div>

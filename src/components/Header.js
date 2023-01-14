@@ -6,15 +6,15 @@ import Image from "../assets/images/main-bcg.jpeg";
 const Header = () => {
   return (
     <Wrapper>
-      <header className="header">
-        <div className="banner">
+      <header className='header' id='home'>
+        <div className='banner'>
           <h2>Over one hundred flavours of</h2>
           <h1>
             specially
             <br />
             crafted tea
           </h1>
-          <a href="skills.html" className="btn banner-btn">
+          <a href='skills.html' className='btn banner-btn'>
             Explore
           </a>
         </div>

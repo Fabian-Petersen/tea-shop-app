@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
+import links from "../pageLinks";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,38 +13,28 @@ const Nav = () => {
   return (
     <Wrapper>
       <section>
-        <button className="nav-btn" onClick={handleNavBar}>
+        <button className='nav-btn' onClick={handleNavBar}>
           <FontAwesomeIcon icon={faBars} />
         </button>
         {/* </span> */}
         {/* <nav className="navbar" id="navbar"> */}
-        <nav className={`${isOpen ? "navbar showNav" : "navbar"}`} id="navbar">
-          <div className="navbar-header">
-            <button className="nav-close" onClick={handleNavBar}>
+        <nav className={`${isOpen ? "navbar showNav" : "navbar"}`} id='navbar'>
+          <div className='navbar-header'>
+            <button className='nav-close' onClick={handleNavBar}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
           </div>
-          <ul className="nav-items">
-            <li>
-              <a href="#!" className="nav-link">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#!" className="nav-link">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#!" className="nav-link">
-                Skills
-              </a>
-            </li>
-            <li>
-              <a href="#!" className="nav-link">
-                Contact
-              </a>
-            </li>
+          <ul className='nav-items'>
+            {links.map((item, index) => {
+              const { name, url } = item;
+              return (
+                <li key={index}>
+                  <a href={url} className='nav-link'>
+                    {name}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </section>

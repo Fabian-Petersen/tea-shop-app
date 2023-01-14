@@ -1,30 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import items from "../assets/images/productsData";
+import items from "../productsData";
 import Product from "./Product";
 
 const ProductList = () => {
-  const [productItems, setProductItem] = useState(items);
+
   return (
     <Wrapper>
-      <section className="products">
-        <div className="section-center clearfix">
-          {/* Start Products Info */}
-          <article className="products-info">
-            <div className="section-title">
+      <section className='products'>
+        <div className='section-center clearfix'>
+          <article className='products-info'>
+            <div className='section-title'>
               <h3>Check Out</h3>
               <h2>Our Products</h2>
             </div>
-            <p className="product-text">
+            <p className='product-text'>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Repellendus temporibus corrupti tenetur delectus autem similique
             </p>
-            <a href="products.html" className="btn">
+            <a href='products.html' className='btn'>
               Inventory
             </a>
           </article>
-          {/* End Prducts Info */}
-          <Product items={productItems} />
+          <Product items={items} />
         </div>
       </section>
     </Wrapper>
@@ -52,7 +50,6 @@ const Wrapper = styled.section`
 
   .product-img {
     border-radius: var(--border-rad);
-    margin-bottom: 2rem;
     height: 17rem;
     object-fit: cover;
   }
