@@ -15,14 +15,14 @@ const items = [
     name: "White Tea",
     price: 4599,
     image: image2,
-    desc: "Lorem ipsum dolor, sit amet consectetur",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
   },
   {
     id: 3,
     name: "Fruit Sangaria",
     price: 3899,
     image: image3,
-    desc: "Lorem ipsum dolor, sit elit.",
+    desc: "Lorem ipsum dolor, sit elit sit amet adipisicing consectetur.",
   },
 ];
 

@@ -53,9 +53,7 @@ const Wrapper = styled.section`
   }
 
   .product-title {
-    margin-top: 2rem;
-  }
-  h4 {
+    margin-top: 1.5rem;
   }
 `;
 
