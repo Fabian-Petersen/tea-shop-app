@@ -26,6 +26,7 @@ Variables
 
   /*? General */
   --transition: all 0.3s linear;
+  --transition-delay: all 0.3s linear 0.4s;
   --spacing: 0.25rem;
   --border-rad: 0.5rem;
 }

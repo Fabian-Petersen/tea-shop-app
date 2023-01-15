@@ -6,6 +6,8 @@ import links from "../pageLinks";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
+
   const handleNavBar = () => {
     setIsOpen(!isOpen);
   };
@@ -13,21 +15,21 @@ const Nav = () => {
   return (
     <Wrapper>
       <section>
-        <button className='nav-btn' onClick={handleNavBar}>
+        <button className="nav-btn" onClick={handleNavBar}>
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <nav className={`${isOpen ? "navbar showNav" : "navbar"}`} id='navbar'>
-          <div className='navbar-header'>
-            <button className='nav-close' onClick={handleNavBar}>
+        <nav className={`${isOpen ? "navbar showNav" : "navbar"}`} id="navbar">
+          <div className="navbar-header">
+            <button className="nav-close" onClick={handleNavBar}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
           </div>
-          <ul className='nav-items'>
+          <ul className="nav-items">
             {links.map((item, index) => {
               const { name, url } = item;
               return (
                 <li key={index}>
-                  <a href={url} className='nav-link'>
+                  <a href={url} className="nav-link" onClick={handleNavBar}>
                     {name}
                   </a>
                 </li>
@@ -68,7 +70,7 @@ const Wrapper = styled.section`
     box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
     /* hide Navbar */
     transform: translateX(-100%);
-    transition: var(--transition);
+    transition: var(--transition-delay);
   }
 
   .showNav {
