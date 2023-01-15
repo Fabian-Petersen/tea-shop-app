@@ -1,23 +1,23 @@
 const links = [
   {
     name: "Home",
-    url: "#home",
+    url: "https://tea-brewery.netlify.app/#home",
   },
   {
     name: "about",
-    url: "#about",
+    url: "https://tea-brewery.netlify.app/#about",
   },
   {
     name: "products",
-    url: "#products",
+    url: "https://tea-brewery.netlify.app/#products",
   },
   {
     name: "services",
-    url: "#services",
+    url: "https://tea-brewery.netlify.app/#services",
   },
   {
     name: "contact",
-    url: "#contact",
+    url: "https://tea-brewery.netlify.app/#contact",
   },
 ];
 

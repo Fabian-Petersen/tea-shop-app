@@ -1,55 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Icons from "../assets/images/icons";
-import { useForm, ValidationError } from "@formspree/react";
+import ContactInfo from "./ContactInfo";
 
 const Contact = () => {
-  const { faLocationArrow, faEnvelope, faPhone } = Icons;
-  const [state, handleSubmit] = useForm("xyyagwjo");
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
-
   return (
     <Wrapper>
       <section className='contact' id='contact'>
         <div className='section-center clearfix'>
-          <article className='contact-info'>
-            <div className='contact-item'>
-              <h4 className='contact-title'>
-                <span className='contact-icon'>
-                  <FontAwesomeIcon icon={faLocationArrow} />
-                </span>
-                Address
-              </h4>
-              <h4 className='contact-text'>Tygervalley, Cape Town, 7530</h4>
-            </div>
-            <div className='contact-item'>
-              <h4 className='contact-title'>
-                <span className='contact-icon'>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </span>
-                Email
-              </h4>
-              <h4 className='contact-text'>john@email.com</h4>
-            </div>
-            <div className='contact-item'>
-              <h4 className='contact-title'>
-                <span className='contact-icon'>
-                  <FontAwesomeIcon icon={faPhone} />
-                </span>
-                Phone
-              </h4>
-              <h4 className='contact-text'>021 555 7852</h4>
-            </div>
-          </article>
-
+          <ContactInfo />
           {/* ================================================= Contact Form  ============================================= */}
 
           <article className='contact-form'>
             <h3>Contact Us</h3>
-            <form onSubmit={handleSubmit}>
+            <form
+              acceptCharset='utf-8'
+              action='https://formspree.io/f/xyyagwjo'
+              method='POST'>
               <div className='form-group'>
                 <input
                   type='text'
@@ -63,26 +29,13 @@ const Contact = () => {
                   placeholder='john@mail.com'
                   className='form-control'
                 />
-                <ValidationError
-                  prefix='Email'
-                  field='email'
-                  errors={state.errors}
-                />
                 <textarea
                   name='message'
                   placeholder='message'
                   className='form-control'
                   rows='5'></textarea>
-                <ValidationError
-                  prefix='Message'
-                  field='message'
-                  errors={state.errors}
-                />
               </div>
-              <button
-                className='btn submit-btn'
-                type='submit'
-                disabled={state.submitting}>
+              <button className='btn submit-btn' type='submit'>
                 Submit
               </button>
             </form>
@@ -96,28 +49,6 @@ const Contact = () => {
 const Wrapper = styled.section`
   .contact {
     background-color: var(--clr-grey-10);
-  }
-
-  .contact-form,
-  .contact-info {
-    margin: 1rem 0;
-  }
-
-  .contact-item {
-    margin-bottom: 1.75rem;
-  }
-
-  .contact-title {
-    color: var(--clr-primary);
-    font-weight: 400;
-  }
-
-  .contact-title span {
-    padding-right: 0.75rem;
-  }
-
-  .contact-text {
-    text-transform: uppercase;
   }
 
   /* ================================================= Contact Form Styles  ============================================= */
@@ -152,7 +83,6 @@ const Wrapper = styled.section`
     margin-bottom: 1.25rem;
     background-color: var(--clr-grey-10);
     border-radius: var(--border-rad);
-    text-transform: capitalize;
     letter-spacing: var(--spacing);
   }
 
