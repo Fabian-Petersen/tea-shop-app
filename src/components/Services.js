@@ -6,30 +6,30 @@ import services from "../servicesData";
 const Services = () => {
   return (
     <Wrapper>
-      <section className='services'>
-        <div className='section-title services-title'>
+      <section className="services" id="services">
+        <div className="section-title services-title">
           <h3>Explore</h3>
           <h2>Our Services</h2>
         </div>
-        <div className='section-center clearfix' id='services'>
+        <div className="section-center clearfix">
           {services.map((item) => {
             const { id, service, image, description, icon } = item;
             return (
-              <article className='service-card' key={id}>
-                <div className='service-img-container'>
+              <article className="service-card" key={id}>
+                <div className="service-img-container">
                   <img
                     src={image}
-                    alt='single service 1'
-                    className='service-img'
+                    alt="single service 1"
+                    className="service-img"
                   />
-                  <span className='service-icon'>
-                    <FontAwesomeIcon className='fa-fw' icon={icon} />
+                  <span className="service-icon">
+                    <FontAwesomeIcon className="fa-fw" icon={icon} />
                   </span>
                 </div>
-                <div className='service-info'>
+                <div className="service-info">
                   <h4>{service}</h4>
                   <p>{description}</p>
-                  <a href='products.html' className='btn service-btn'>
+                  <a href="products.html" className="btn service-btn">
                     Read More
                   </a>
                 </div>

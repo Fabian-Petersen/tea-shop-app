@@ -14,11 +14,11 @@ const Nav = () => {
 
   return (
     <Wrapper>
-      <section>
+      <section id="navbar">
         <button className="nav-btn" onClick={handleNavBar}>
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <nav className={`${isOpen ? "navbar showNav" : "navbar"}`} id="navbar">
+        <nav className={`${isOpen ? "navbar showNav" : "navbar"}`}>
           <div className="navbar-header">
             <button className="nav-close" onClick={handleNavBar}>
               <FontAwesomeIcon icon={faTimes} />

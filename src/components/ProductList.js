@@ -4,21 +4,20 @@ import items from "../productsData";
 import Product from "./Product";
 
 const ProductList = () => {
-
   return (
     <Wrapper>
-      <section className='products'>
-        <div className='section-center clearfix'>
-          <article className='products-info'>
-            <div className='section-title'>
+      <section className="products" id="products">
+        <div className="section-center clearfix">
+          <article className="products-info">
+            <div className="section-title">
               <h3>Check Out</h3>
               <h2>Our Products</h2>
             </div>
-            <p className='product-text'>
+            <p className="product-text">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Repellendus temporibus corrupti tenetur delectus autem similique
             </p>
-            <a href='products.html' className='btn'>
+            <a href="products.html" className="btn">
               Inventory
             </a>
           </article>
