@@ -16,8 +16,6 @@ const Nav = () => {
         <button className='nav-btn' onClick={handleNavBar}>
           <FontAwesomeIcon icon={faBars} />
         </button>
-        {/* </span> */}
-        {/* <nav className="navbar" id="navbar"> */}
         <nav className={`${isOpen ? "navbar showNav" : "navbar"}`} id='navbar'>
           <div className='navbar-header'>
             <button className='nav-close' onClick={handleNavBar}>
