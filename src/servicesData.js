@@ -9,7 +9,7 @@ const services = [
     id: 1,
     service: "Custom Recipes",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, aut! Unde dignissimos architecto, sunt velit cupiditate iure quaerat quisquam quam.",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, aut! Unde dignissimon.",
     image: Image1,
     icon: faMortarPestle,
   },
